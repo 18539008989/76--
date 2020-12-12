@@ -65,6 +65,9 @@ $(function() {
     // 4.发送ajax  => 照着接口文档
 
     // 1.
+    $.ajaxPrefilter(function(e) {
+        e.url = "http://ajax.frontend.itheima.net" + e.url;
+    })
     $("#regiForm").submit(function(e) {
 
         // 2.
@@ -75,7 +78,7 @@ $(function() {
         // 4. 
         $.ajax({
             type: "POST",
-            url: "http://ajax.frontend.itheima.net/api/reguser",
+            url: "/api/reguser",
             data,
             success: function(res) {
                 if (res.status !== 0) {
@@ -97,7 +100,7 @@ $(function() {
         let data = $(this).serialize();
         $.ajax({
             type: "POST",
-            url: "http://ajax.frontend.itheima.net/api/login",
+            url: "/api/login",
             data,
             success: function(res) {
                 if (res.status !== 0) {
