@@ -65,9 +65,6 @@ $(function() {
     // 4.发送ajax  => 照着接口文档
 
     // 1.
-    $.ajaxPrefilter(function(e) {
-        e.url = "http://ajax.frontend.itheima.net" + e.url;
-    })
     $("#regiForm").submit(function(e) {
 
         // 2.
@@ -91,7 +88,7 @@ $(function() {
                 $("#goToLogin").click();
             }
         });
-
+        localStorage.setItem("新用户", data)
     });
 
 
@@ -106,6 +103,7 @@ $(function() {
                 if (res.status !== 0) {
                     return layer.msg(res.message);
                 };
+                localStorage.setItem("token", res.token);
                 layer.msg('登录成功', {
                         time: 2000,
                     },
