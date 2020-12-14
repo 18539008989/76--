@@ -104,7 +104,7 @@ $(function() {
                     return layer.msg(res.message);
                 };
                 localStorage.setItem("token", res.token);
-                layer.msg('登录成功', {
+                layer.msg('登录成功即将跳转首页', {
                         time: 2000,
                     },
                     function() {
