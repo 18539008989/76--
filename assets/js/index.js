@@ -6,6 +6,7 @@ function getUserInfo() {
         url: "/my/userinfo",
 
         success: function(res) {
+            // console.log(res);
             if (res.status !== 0) {
                 return layer.msg("获取用户信息失败");
             }
@@ -13,6 +14,7 @@ function getUserInfo() {
             $("#weLcome").text(name);
 
             if (res.data.user_pic) {
+                $('.layui-nav-img').attr('src', res.data.user_pic);
                 $(".layui-nav-img").show();
                 $(".textAcatar").hide();
             } else {
@@ -21,7 +23,6 @@ function getUserInfo() {
             }
         },
         complete: function(res) {
-            console.log(res);
             let a = res.responseJSON;
             if (a.status === 1 && a.message === "身份认证失败！") {
                 location.href = "/home/login.html"

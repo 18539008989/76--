@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+}
+
+.title {
+    height: 42px;
+    line-height: 42px;
+    padding-left: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.layui-card-body {
+    padding: 10px;
+}
+
+
+/* .layui-table  */
+
+.btn {
+    float: right;
+    padding-right: 20px;
+}
+
+.layui-form-item {
+    padding-top: 15px;
+    padding-right: 15px;
+}
+
+.layui-form-label {
+    width: 90px;
+}

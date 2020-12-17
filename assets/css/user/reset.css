@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.dabox {
+    background-color: #fff;
+}
+
+.box1 {
+    width: 500px;
+}
+
+.layui-care-header {
+    height: 40px;
+    padding-left: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.layui-form-item {
+    padding: 5px 0;
+}
+
+.layui-form-item:nth-child(1) {
+    padding-top: 10px;
+}
+
+.layui-form-label {
+    width: 100px;
+}
