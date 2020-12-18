@@ -67,28 +67,27 @@
         </form>
     </script>
     <script type="text/html" id="addTwo">
-        <form id="addFormTwo" data-id="Id" name="Id" class="layui-form" action="">
+        <form id="addFormTwo" data-id="Id" lay-filter="editForm" class="layui-form" action="">
             <!-- 第一行 分类名称 -->
 
             <div class="layui-form-item">
                 <label class="layui-form-label">分类名称</label>
                 <div class="layui-input-block">
-                    <input type="text" name="name" data-id="name" required lay-verify="required" placeholder="请输入分类名称" autocomplete="off" class="layui-input">
+                    <input type="text" name="name" id="flmc" data-id="name" required lay-verify="required" placeholder="请输入分类名称" autocomplete="off" class="layui-input">
                 </div>
             </div>
             <!-- 第二行 分类别名 -->
             <div class="layui-form-item">
                 <label class="layui-form-label">分类别名</label>
                 <div class="layui-input-block">
-                    <input type="text" name="alias" data-id="alias" required lay-verify="required" placeholder="请输入分类别名" autocomplete="off" class="layui-input">
+                    <input type="text" name="alias" id="flbm" data-id="alias" required lay-verify="required" placeholder="请输入分类别名" autocomplete="off" class="layui-input">
                 </div>
             </div>
             <!-- 第三行 按钮 -->
             <div class="layui-form-item">
                 <div class="layui-input-block">
-                    <input type="hidden" name="Id" value="1">
+                    <input type="hidden" name="Id" id='Id'>
                     <button class="layui-btn" lay-submit lay-filter="formDemo">确认修改</button>
-                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
                 </div>
             </div>
         </form>
@@ -99,8 +98,8 @@
             <td>{{$value.name}}</td>
             <td>{{$value.alias}}</td>
             <td>
-                <button type="button" data-id="{{$value.Id}}" class="layui-btn layui-btn-xs edit">修改</button>
-                <button type="button" id="btnTwe" data-id="{{$value.Id}}" class="layui-btn layui-btn-xs  layui-btn-danger">删除</button>
+                <button type="button" data-id="{{$value.Id}}" class="layui-btn layui-btn-xs edit">编辑</button>
+                <button type="button" data-id="{{$value.Id}}" class="layui-btn layui-btn-xs  layui-btn-danger btnTwe">删除</button>
             </td>
         </tr>
         {{/each}}
